@@ -1,7 +1,7 @@
-let randomPhoto = {
-	message: "https://images.dog.ceo/breeds/bulldog-boston/n02096585_5104.jpg",
-	status: "success",
-};
+// let randomPhoto = {
+// 	message: "https://images.dog.ceo/breeds/bulldog-boston/n02096585_5104.jpg",
+// 	status: "success",
+// };
 function makeRandomPhoto(photo) {
 	const randomizedPhoto = Math.floor(Math.random() * randomPhoto.message);
 	photo = randomizedPhoto;
@@ -18,11 +18,11 @@ btnElem.addEventListener("click", function () {
 			const ulElem = document.getElementById("ul-element");
 			const liElem = document.createElement("li");
 			const imgElem = document.createElement("img");
-			imgElem.src = `${randomPhoto.message}`;
+			imgElem.src = `${data.message}`;
 			liElem.appendChild(imgElem);
 			ulElem.appendChild(liElem);
-			data = makeRandomPhoto(ulElem);
-			return data;
+			//data = makeRandomPhoto(ulElem);
+			//return data;
 		})
 		.catch(function (error) {
 			return `No photos ${error}`;
@@ -30,7 +30,7 @@ btnElem.addEventListener("click", function () {
 });
 
 /**
- * 
+ *
  * Let's make a randomized dog photo gallery!
 
 Write a function that makes an API call to `https://dog.ceo/api/breeds/image/random`. It should trigger after clicking a button in your webpage. Every time the button is clicked it should append a new dog image to the DOM.
